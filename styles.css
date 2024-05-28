@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 从顶部开始对齐 */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* 改为vh确保适应屏幕高度 */
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box; /* 确保padding包含在宽度内 */
+}
+
+.game-info, .log-container, .author-message, .download-links, .copyright {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.game-info h1, .log-container h2, .author-message h2, .download-links h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.game-info p, .log-entry p, .log-entry ul, .author-message p, .download-links p {
+    font-size: 16px;
+    color: #666;
+    text-align: justify;
+}
+
+.log-entry h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.log-entry ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.log-entry ul li {
+    font-size: 16px;
+    color: #333;
+}
+
+.download-links p {
+    font-size: 16px;
+    color: #333;
+}
+
+.download-links a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.download-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin: 0;
+}
