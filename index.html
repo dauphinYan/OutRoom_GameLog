@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>游戏更新日志</title>
+    <meta name="description" content="逃出密室是一款虚幻引擎制作的第一人称解密游戏。">
+    <title>逃出密室 - 第一人称解密游戏介绍</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="sidebar">
+    <button class="sidebar-toggle" type="button">目录</button>
+    <div class="sidebar" role="navigation" aria-label="侧边栏">
         <h2>目录</h2>
         <ul>
             <li><a href="#about">游戏介绍</a></li>
@@ -18,42 +22,52 @@
     </div>
     <div class="main-content">
         <div id="about" class="game-info">
-            <h1>游戏名称</h1>
-            <p>这是游戏的介绍部分。这里你可以详细描述游戏的背景、玩法、特色等内容。</p>
+            <h1>逃出密室</h1>
+            <p>《逃出密室》是一款使用虚幻引擎（Unreal Engine）制作的第一人称解密游戏。</p>
+            <p>该游戏完全由"蓝图"制作，原创程度100%。</p>
+        </div>
+        <div id="log" class="log-container">
+            <h2>更新日志</h2>
+            <div class="log-entry">
+                <h3>版本 1.0.0</h3>
+                <p>发布日期：2024年5月28日</p>
+                <ul>
+                    <li>游戏第一个测试版本发布。</li>
+                    <li>包含完整游戏流程。</li>
+                    <li>场景简单的搭建。</li>
+                </ul>
+            </div>
         </div>
         <div id="author" class="author-message">
             <h2>作者的话</h2>
-            <p>感谢大家支持这款游戏。希望你们能够喜欢并享受游戏的每一个细节。</p>
-        </div>
-        <div id="log" class="log-container">
-            <h2>游戏更新日志</h2>
+            <p>首先感谢大家支持这款游戏!</p>
             <div class="log-entry">
-                <h3>版本 1.0.1</h3>
-                <p>发布日期：2024年5月28日</p>
-                <ul>
-                    <li>修复了几个已知的漏洞。</li>
-                    <li>优化了游戏性能。</li>
-                    <li>新增了一个新的关卡。</li>
-                </ul>
-            </div>
-            <div class="log-entry">
-                <h3>版本 1.0.0</h3>
-                <p>发布日期：2024年5月20日</p>
-                <ul>
-                    <li>游戏正式发布。</li>
-                    <li>包括初始的10个关卡。</li>
-                    <li>添加了多种武器和道具。</li>
-                </ul>
+                <h4>日期：2024.5.28</h4>
+                <p>本人是一名在校大三学生，虽然距今仅有半年间断性游戏开发经验，但目标是成为一名真正的游戏开发者，现在正在疯狂的学习（不得不感概，开发一款游戏需要了解的知识简直深不见底）。</p>
+                <p>难归难，但开发游戏的过程还是非常有趣的。</p>
+                <p>怎么说呢，从游戏本身来讲，游戏完全可以按照自己的想法，这里不满意改一下，那里不满意改改，完全不受拘束；从游戏开发过程来看，你可以查阅官方文档，可以在论坛和老外交流，用蹩脚的英语去理解国外开发者的意思，同时也让国外开发者理解自己蹩脚的英语，其实挺有趣的。
+                </p>
+                <p>目前发布的第一版的游戏还存在许多的BUG（不会改，太痛苦），后续会逐步完善。</p>
+                <p>关卡设计，我发现自己真不是这一块的料，做完第一版自己在游玩的过程中，明显感觉到有很多地方要改进，但我不知道怎么改，求助各位。</p>
+                <p>环境搭建，还是得请专业的来...</p>
+                <p>最后还是感谢大家，游戏存在很多BUG，游玩体验可能不会太好，等我能力上来了一定改。</p>
             </div>
         </div>
         <div id="download" class="download-links">
             <h2>下载链接</h2>
-            <p><a href="下载链接1">下载链接1</a></p>
-            <p><a href="下载链接2">下载链接2</a></p>
+            <p><a href="下载链接1" title="点击下载链接1">下载链接1</a></p>
+            <p><a href="下载链接2" title="点击下载链接2">下载链接2</a></p>
         </div>
         <div class="copyright">
-            <p>© 2024 游戏公司名称。保留所有权利。</p>
+            <p>© 2024 作者Orca丶。保留所有权利。</p>
         </div>
     </div>
+    <script src="scripts.js"></script>
+    <script>
+        document.querySelector('.sidebar-toggle').addEventListener('click', function () {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>

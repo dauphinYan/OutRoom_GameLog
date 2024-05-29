@@ -5,11 +5,11 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* 从顶部开始对齐 */
+    align-items: flex-start;
 }
 
 .sidebar {
-    width: 200px;
+    width: 220px;
     background-color: #fff;
     padding: 20px;
     border-right: 1px solid #ccc;
@@ -17,14 +17,16 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh; /* 改为vh确保适应屏幕高度 */
+    height: 100vh;
     overflow-y: auto;
+    transition: transform 0.3s ease;
 }
 
 .sidebar h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .sidebar ul {
@@ -33,25 +35,31 @@ body {
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .sidebar ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    background-color: #f0f0f0; /* 增加悬停背景颜色 */
+    color: #000; /* 悬停时字体颜色 */
 }
 
 .main-content {
-    margin-left: 220px;
+    margin-left: 240px;
     padding: 20px;
     max-width: 800px;
     width: 100%;
-    box-sizing: border-box; /* 确保padding包含在宽度内 */
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease;
 }
 
 .game-info, .log-container, .author-message, .download-links, .copyright {
@@ -109,4 +117,32 @@ body {
     color: #666;
     text-align: center;
     margin: 0;
+}
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
 }
