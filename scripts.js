@@ -24,3 +24,12 @@ document.querySelector('.sidebar-toggle').addEventListener('click', function () 
         sidebar.style.transform = 'translateX(0px)';
     }
 });
+
+// 点击侧边栏外部隐藏侧边栏
+document.addEventListener('click', function (e) {
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+        sidebar.style.transform = 'translateX(-100%)';
+    }
+});
