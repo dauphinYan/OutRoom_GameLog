@@ -17,6 +17,10 @@ document.querySelectorAll('.sidebar ul li a').forEach(anchor => {
 });
 
 document.querySelector('.sidebar-toggle').addEventListener('click', function () {
+    document.querySelector('.sidebar').classList.toggle('active');
+});
+
+document.querySelector('.sidebar-toggle').addEventListener('click', function () {
     const sidebar = document.querySelector('.sidebar');
     if (sidebar.style.transform === 'translateX(0px)') {
         sidebar.style.transform = 'translateX(-100%)';
@@ -25,7 +29,6 @@ document.querySelector('.sidebar-toggle').addEventListener('click', function () 
     }
 });
 
-// 点击侧边栏外部隐藏侧边栏
 document.addEventListener('click', function (e) {
     const sidebar = document.querySelector('.sidebar');
     const sidebarToggle = document.querySelector('.sidebar-toggle');

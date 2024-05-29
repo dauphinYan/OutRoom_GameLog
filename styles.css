@@ -45,12 +45,12 @@ body {
     padding: 10px 15px;
     display: block;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar ul li a:hover {
-    background-color: #f0f0f0; /* 增加悬停背景颜色 */
-    color: #000; /* 悬停时字体颜色 */
+    background-color: #f0f0f0;
+    color: #000;
 }
 
 .main-content {
@@ -62,7 +62,7 @@ body {
     transition: margin-left 0.3s ease;
 }
 
-.game-info, .log-container, .author-message, .download-links, .copyright {
+.game-info, .log-container, .author-message, .download-links, .gallery, .copyright {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ccc;
@@ -70,7 +70,7 @@ body {
     margin-bottom: 20px;
 }
 
-.game-info h1, .log-container h2, .author-message h2, .download-links h2 {
+.game-info h1, .log-container h2, .author-message h2, .download-links h2, .gallery h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
@@ -145,4 +145,21 @@ body {
     .sidebar-toggle {
         display: block;
     }
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    margin: 10px;
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
